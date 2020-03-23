@@ -21,7 +21,7 @@ for(i in 1:9){
   plot(pc.had$x[,(i*2-1):(i*2)], pch=16, cex=0.1, col="grey")
 }
 par(mfrow=c(1,1))
-set.seed(131); umap.had=umap(pc.had$x[,1:9], n_neighbors=15 , min_dist=0.000, verbose=T, n_threads=8, ret_nn = T, nn_method="FNN")
+set.seed(131); umap.had=umap(pc.had$x[,1:9], n_neighbors=15 , min_dist=0.01, verbose=T, n_threads=8, ret_nn = T, nn_method="FNN")
 plot(umap.had$embedding, col="grey", pch=16, cex=0.25)
 
 clust2<-function(matrix1, matrix2){
