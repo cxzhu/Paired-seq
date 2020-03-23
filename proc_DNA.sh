@@ -1,7 +1,7 @@
 s=$1
 
 reacthools combine CZ${s}_R1.fq.gz CZ${s}_R2.fq.gz
-zcat CZ${s}_combined.fq.gz | bowtie /projects/ps-renlab/chz272/genome_ref/cell_id/cell_id -p 8 -v 3 --norc - -S CZ${s}.sam
+zcat CZ${s}_combined.fq.gz | bowtie /projects/ps-renlab/chz272/genome_ref/cell_id/cell_id -p 8 -v 1 -m 1 --norc - -S CZ${s}.sam
 
 reachtools convert CZ${s}.sam
 trim_galore CZ${s}_cov.fq.gz
