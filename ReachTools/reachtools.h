@@ -106,7 +106,7 @@ public:
 
 		//2nd bc
 		bait = "GGATTCGAGGAGCGT";
-		cur_s = 0;
+		cur_s = 10;
 		int tt = t;
 		for(int i = -2; i < 3; ++i){
 			string qu = rawline.substr(54+i+tt, 15);
@@ -116,7 +116,7 @@ public:
 			tt = t + i;
 		}
 		//if(cur_s<13)return;
-		if(cur_s<2)return;
+		if(cur_s<11)return;
 		t = tt;
 		sbc2 = rawline.substr(47+t, 7);
 		dock = 2;
