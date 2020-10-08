@@ -100,6 +100,21 @@ int main(int argc, char** argv) {
 
 		}
 		string ref = "/projects/ps-renlab/chz272/annotations/human_hg19_genomic_region_annotation/hg19.gencode.v19.txt";
+		// A reference file for DNA bins/peaks or RNA genes is needed here
+		//DNA
+		//chrom pos_start pos_end bin_name_1 bin_name_2
+		//chr1 0 1000 chr1:0-1000 chr1:0-1000
+		//chr1 1000 2000 chr1:1000-2000 chr1:1000-2000
+		//
+		// a representative mm10 in 5kb-bin ref file is in https://github.com/cxzhu/Paired-Tag/blob/master/refereces/mm10.bin5k.txt.zip
+
+		//RNA
+		//chrom pos_start pos_end gene_ID gene_symbol
+		//chr1 3072253 3075322 ENSMUSG00000102693 4933401J01Rik
+		//chr1 3101016 3103125 ENSMUSG00000064842 Gm26206
+		// 
+		// for mm10, you can access it from: https://github.com/cxzhu/Paired-Tag/blob/master/refereces/mm10.RNA.txt
+		
 		if(argc >= 4){
 			ref = argv[3];
 			if(ref == "mm10"){
